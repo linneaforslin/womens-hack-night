@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My HTML Document</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>This is a basic HTML document.</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moffitt Spaces - UC Berkeley Library</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-brand">
+                <div class="brand-icon">🏛️</div>
+                <div>
+                    <h1 class="brand-title">Moffitt Spaces</h1>
+                    <p class="brand-subtitle">UC Berkeley Library</p>
+                </div>
+            </div>
+            <div class="header-meta">
+                <span class="update-time">🕒 Updated just now</span>
+                <button class="icon-btn" aria-label="Refresh data">🔄</button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Location & Title Banner -->
+            <div class="hero-section">
+                <span class="location-tag">📖 Moffitt Library · Floor 1</span>
+                <h2 class="hero-title">Find your place to study.</h2>
+                <p class="hero-desc">Live availability for group rooms, quiet zones, and open seating.</p>
+                
+                <div class="stats-card">
+                    <span class="stats-icon">👥</span>
+                    <div>
+                        <span class="stats-label">OPEN SEATS</span>
+                        <h3 class="stats-value">55 <span>of 120</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-bar">
+                <button class="filter-pill active">All spaces</button>
+                <button class="filter-pill">🟢 Available</button>
+                <button class="filter-pill">🟡 Filling up</button>
+                <button class="filter-pill">🔴 Occupied</button>
+                <span class="space-count">9 spaces shown</span>
+            </div>
+
+            <!-- Floor Grid Overview & Detail Split -->
+            <div class="dashboard-grid">
+                <!-- Map / Floor Plan Section -->
+                <div class="floor-map-card">
+                    <div class="map-header">
+                        <h3>Floor 1 overview</h3>
+                        <span class="live-indicator"><span class="pulse-dot"></span> Live</span>
+                    </div>
+                    <p class="map-hint">Select a space to see details</p>
+
+                    <!-- Interactive Rooms Grid -->
+                    <div class="rooms-grid">
+                        <div class="room-box available active-room">
+                            <span class="room-type">ROOM</span>
+                            <span class="room-num">101</span>
+                            <span class="room-status-dot green"></span>
+                            <span class="room-capacity">0 / 6 seats</span>
+                        </div>
+                        <div class="room-box occupied">
+                            <span class="room-type">ROOM</span>
+                            <span class="room-num">102</span>
+                            <span class="room-status-dot red"></span>
+                            <span class="room-capacity">6 / 6 seats</span>
+                        </div>
+                        <div class="room-box filling">
+                            <span class="room-type">ROOM</span>
+                            <span class="room-num">103</span>
+                            <span class="room-status-dot yellow"></span>
+                            <span class="room-capacity">4 / 6 seats</span>
+                        </div>
+                        <div class="room-box filling open-seat">
+                            <span class="room-type">OPEN SEATING</span>
+                            <span class="room-name">North window bar</span>
+                            <span class="room-status-dot yellow"></span>
+                            <span class="room-capacity">9 / 12 seats</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details Panel -->
+                <div class="details-panel">
+                    <div class="detail-status-badge">Available now</div>
+                    <h3 class="detail-room-title">Study Room 101</h3>
+                    <p class="detail-room-type">Room</p>
+
+                    <div class="occupancy-box">
+                        <span class="occ-label">OCCUPANCY</span>
+                        <div class="occ-numbers"><strong>0</strong> / 6</div>
+                    </div>
+
+                    <div class="amenities-section">
+                        <span class="occ-label">AMENITIES</span>
+                        <div class="amenities-tags">
+                            <span class="tag">Display</span>
+                            <span class="tag">Whiteboard</span>
+                        </div>
+                    </div>
+
+                    <p class="sensor-note">Occupancy is estimated from anonymous room sensors and refreshes every minute.</p>
+                    <button class="directions-btn">Get directions</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Experimental occupancy data · For planning purposes only</p>
+            <p>Moffitt Library · University of California, Berkeley</p>
+        </footer>
+    </div>
+</body>
 </html>
